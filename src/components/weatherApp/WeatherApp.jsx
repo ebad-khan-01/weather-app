@@ -17,7 +17,8 @@ function WeatherApp() {
   });
   const [error, setError] = useState("");
 
-  const api_Key = "47739618cd7adff4b6b7003d215f5583";
+  // Accessing environment variable in Vite
+  const api_Key = import.meta.env.VITE_API_KEY;
 
   const searchWeather = async () => {
     if (!city.trim()) {
